@@ -1,0 +1,29 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 500,
+    "max": 2000
+  },
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "xbGjp1zW0IJR+UgMlmH1kHMpb8k=",
+    "authStrategies": ["jwt", "local"],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://booksuey.com",
+      "issuer": "Book Suey",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  },
+  "mongodb": "mongodb+srv://openshelf:bookbots@openshelf-1rpav.gcp.mongodb.net/purchasing"
+}
