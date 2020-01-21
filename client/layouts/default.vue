@@ -55,9 +55,14 @@ export default {
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          icon: 'mdi-book-open',
+          title: 'Find & Order',
+          to: '/order'
+        },
+        {
+          icon: 'mdi-folder-table',
+          title: 'All Orders',
+          to: '/orders'
         }
       ],
       miniVariant: false,
