@@ -4,12 +4,19 @@
       <h2>Current Orders</h2>
 
       <v-data-table
+        v-model="selected"
         :headers="headers"
-        :items="orders"
-        :items-per-page="5"
+        :items="orders"      
+        item-key="title"
+        show-select
+        :items-per-page=15
+        :single-select=false
         class="elevation-1"
+        :footer-props="{
+          itemsPerPageOptions: [15,30,50,-1]
+        }"
       ></v-data-table>
-      
+
     </v-flex>
   </v-layout>
 </template>
@@ -21,6 +28,11 @@ export default {
   head() {
     return {
       title: 'Orders listing'
+    }
+  },
+  data() {
+    return {
+      selected: []
     }
   },
   // asyncData info:
